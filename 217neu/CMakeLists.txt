@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(217neu LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(217neu main.cpp)
+
+install(TARGETS 217neu
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
