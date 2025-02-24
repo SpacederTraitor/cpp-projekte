@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+
 using namespace std;
 
 int main()
@@ -12,7 +12,7 @@ int main()
     for (int i = 0; i < 51; ++i) {
         zufallszahl = rand();
     }
-    for (int i = 0; i < 25; ++i) {
+    for (int i = 0; i < 26; ++i) {
         int zuffalszahlArray;
         zahl1 = zufallszahlArray[i];
         cout << zahl1;
