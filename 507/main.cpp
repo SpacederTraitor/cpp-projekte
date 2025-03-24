@@ -18,7 +18,7 @@ int main() {
     input.erase(position, 1);
     cout << "Nach dem Löschen: " << input << endl;
     } else {
-    cout << "Ungültige Position" << endl;
+    cout << "Ungültige Position!" << endl;
     }
 
     return 0;
