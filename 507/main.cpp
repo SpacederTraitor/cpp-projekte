@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     string input;
-    cout << "Geben Sie eine Zeichenkette ein: ";
+    cout << "Geben Sie eine Zeichenkette ein!: ";
     cin >> input;
 
     int position;
