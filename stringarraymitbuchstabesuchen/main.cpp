@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    int buchst;
+    cout << "Buchtstabe mit String suchen:" << endl;
+
     return 0;
 }
