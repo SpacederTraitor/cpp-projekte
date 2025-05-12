@@ -1,0 +1,25 @@
+#ifndef CONTROLLER_H
+#define CONTROLLER_H
+
+class View;
+
+class Controller
+{
+public:
+    Controller(View *newView);
+    void vergleiche();
+    void setZahl1(int newZahl1);
+    void setZahl2(int newZahl2);
+    int getKlein();
+    int getGross();
+
+private:
+    int zahl1;
+    int zahl2;
+    int klein;
+    int gross;
+
+    View *myView;
+};
+
+#endif // CONTROLLER_H
