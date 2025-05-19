@@ -15,6 +15,7 @@ void Ui::eingabe() {
     cin >> zahl2;
     myRechner.setZahl1(zahl1);
     myRechner.setZahl2(zahl2);
+    myRechner.add();
     ergebnis = myRechner.getErgebnis();
-    cout << "Ergebnis: " << ergebnis << endl;
+    cout << "Ergebnis: " << myRechner.getErgebnis() << endl;
 }
