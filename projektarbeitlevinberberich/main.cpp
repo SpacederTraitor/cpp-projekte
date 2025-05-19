@@ -1,7 +1,5 @@
-#include <iostream>
-#include "ui.h"
 
-using namespace std;
+#include "ui.h"
 
 int main()
 {
