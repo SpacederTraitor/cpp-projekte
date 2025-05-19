@@ -1,7 +1,5 @@
 # IDEs
 .vscode/
-*.pro
-*.pro.user
 build/
 build-*/
 outDebug
