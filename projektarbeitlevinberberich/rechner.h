@@ -8,6 +8,15 @@ class Rechner
 public:
     Rechner();
     void add();
+    void sub();
+    void mul();
+    void div();
+    void pow();
+    void wurzel();
+    void andberechnung();
+    void orberechnung();
+    void nand();
+
 
     void setZahl1(int newZahl1);
     void setZahl2(int newZahl2);

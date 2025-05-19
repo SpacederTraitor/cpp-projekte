@@ -1,4 +1,3 @@
-
 #ifndef UI_H
 #define UI_H
 
@@ -7,11 +6,10 @@
 class Ui
 {
 public:
-   void eingabe();
+    void eingabe();
 
 private:
-   Rechner myRechner;
-
+    Rechner myRechner;
 };
 
 #endif // UI_H

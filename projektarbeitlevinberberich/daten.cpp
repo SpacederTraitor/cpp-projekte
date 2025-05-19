@@ -15,3 +15,11 @@ void Daten::setZahl2(int newZahl2){
 int Daten::getZahl2() {
     return zahl2;
 }
+
+void Daten::setErgebnis(int ergebnis){
+    this->ergebnis = ergebnis;
+}
+
+int Daten::getErgebnis() {
+    return ergebnis;
+}
