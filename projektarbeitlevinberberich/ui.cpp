@@ -13,8 +13,8 @@ void Ui::eingabe() {
     cin >> zahl1;
     cout << "Bitte geben Sie Zahl2 ein: ";
     cin >> zahl2;
-    myData->setZahl1(zahl1);
-    myData->setZahl2(zahl2);
-    myRechner.add();
-    cout << "Summe: " << myData->getSumme();
+    myRechner.setZahl1(zahl1);
+    myRechner.setZahl2(zahl2);
+    ergebnis = myRechner.getErgebnis();
+    cout << "Ergebnis: " << ergebnis << endl;
 }

@@ -2,6 +2,7 @@
 #define UI_H
 
 #include "daten.h"
+#include "rechner.h"
 
 class Ui
 {
@@ -9,7 +10,7 @@ public:
    void eingabe();
 
 private:
-   Daten myData;
+   Rechner myRechner;
 
 };
 
