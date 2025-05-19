@@ -8,6 +8,10 @@ class Rechner
 public:
     Rechner();
     void add();
+
+    void setZahl1(int newZahl1);
+    void setZahl2(int newZahl2);
+    int getErgebnis();
 private:
     Daten daten;
 };

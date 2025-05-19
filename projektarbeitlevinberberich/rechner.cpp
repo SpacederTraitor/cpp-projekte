@@ -11,6 +11,8 @@ void Rechner::add() {
 
 }
 
-
+void Rechner::setZahl1(int newZahl1){
+    daten.setZahl1(newZahl1);
+}
 
 
