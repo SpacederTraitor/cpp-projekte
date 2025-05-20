@@ -1,9 +1,10 @@
-
 #include "ui.h"
 
-int main()
-{
+using namespace std;
+
+int main() {
     Ui myUi;
+    myUi.loadData();
     myUi.eingabe();
     return 0;
 }

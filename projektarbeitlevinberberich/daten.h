@@ -1,6 +1,8 @@
 #ifndef DATEN_H
 #define DATEN_H
+#include <string>
 
+using namespace std;
 
 class Daten
 {
@@ -11,12 +13,13 @@ public:
     int getZahl2();
     void setErgebnis(int newErgebnis);
     int getErgebnis();
+    void saveToText(const string& filename);
+    void loadFromText(const string& filename);
 
 private:
-    int zahl1;
-    int zahl2;
-    int ergebnis;
+    int zahl1 = 0;
+    int zahl2 = 0;
+    int ergebnis = 0;
 };
-
 
 #endif // DATEN_H
