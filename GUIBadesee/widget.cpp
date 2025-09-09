@@ -17,6 +17,7 @@ Widget::~Widget()
 void Widget::on_wassertemperaturaktuellbutton_clicked()
 {
     QString temptext;
+
     int wassertemperaturaktuell;
 
     wassertemperaturaktuell = see->getWassertemperaturaktuell();
@@ -29,7 +30,15 @@ void Widget::on_wassertemperaturaktuellbutton_clicked()
 
 void Widget::on_wasserqualitaetbutton_clicked()
 {
+    QString temptext;
 
+    int wasserqualitaet;
+
+    wasserqualitaet = see->getWasserqualitaet();
+
+    temptext = QString::number(wasserqualitaet);
+
+    ui->plainTextEdit->appendPlainText(temptext);
 }
 
 

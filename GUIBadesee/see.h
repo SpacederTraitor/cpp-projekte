@@ -8,10 +8,12 @@ class See
 public:
     See();
 int getWassertemperaturaktuell();
+int getWasserqualitaet();
 
 
 private:
     int wassertemperaturaktuell;
+    int wasserqualitaet;
 };
 
 
