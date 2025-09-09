@@ -2,6 +2,7 @@
 #define SEE_H
 
 #include <random>
+#include <vector>
 
 class See
 {
@@ -14,6 +15,7 @@ int getWasserqualitaet();
 private:
     int wassertemperaturaktuell;
     int wasserqualitaet;
+    std::vector<Person *> personen;
 };
 
 
