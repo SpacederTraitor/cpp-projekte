@@ -15,7 +15,6 @@ int getWasserqualitaet();
 private:
     int wassertemperaturaktuell;
     int wasserqualitaet;
-    std::vector<Person *> personen;
 };
 
 

@@ -11,4 +11,3 @@ int See::getWasserqualitaet(){
     wasserqualitaet = rand() %6;
     return wasserqualitaet;
 }
-

@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "see.h"
+#include "person.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -28,5 +29,6 @@ private slots:
 private:
     Ui::Widget *ui;
     See *see;
+    Person *person;
 };
 #endif // WIDGET_H

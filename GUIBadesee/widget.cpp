@@ -7,6 +7,7 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
     see=new See;
+    person=new Person;
 }
 
 Widget::~Widget()
@@ -22,7 +23,7 @@ void Widget::on_wassertemperaturaktuellbutton_clicked()
 
     wassertemperaturaktuell = see->getWassertemperaturaktuell();
 
-    temptext = QString::number(wassertemperaturaktuell);
+    temptext = QString::number(wassertemperaturaktuell) + " C° ist die aktuelle Wassertemperatur.";
 
     ui->plainTextEdit->appendPlainText(temptext);
 }
@@ -36,7 +37,7 @@ void Widget::on_wasserqualitaetbutton_clicked()
 
     wasserqualitaet = see->getWasserqualitaet();
 
-    temptext = QString::number(wasserqualitaet);
+    temptext = QString::number(wasserqualitaet) + " ist die aktuelle Wasserqualität.";
 
     ui->plainTextEdit->appendPlainText(temptext);
 }
@@ -44,6 +45,14 @@ void Widget::on_wasserqualitaetbutton_clicked()
 
 void Widget::on_personenanzahlbutton_clicked()
 {
+    QString temptext;
 
+    int personenanzahl;
+
+    personenanzahl = person->getPersonenanzahl();
+
+    temptext = QString::number(personenanzahl) + " Personen sind gerade im See.";
+
+    ui->plainTextEdit->appendPlainText(temptext);
 }
 
