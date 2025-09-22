@@ -56,10 +56,114 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>170</y>
+     <y>380</y>
      <width>361</width>
      <height>171</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonPersonAnlegen">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>buttonPersonAnlegen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonAlleKunden">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>120</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>buttonAlleKunden</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonLiegeAnlegen">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>120</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>buttonLiegeAnlegen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonMehrereLiegen">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>130</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>buttonMehrereLiegen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonAlleLiegen">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>180</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>buttonAlleLiegen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonLiegeBuchen">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>190</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>buttonLiegeBuchen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonAlleBuchungen">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>200</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>buttonAlleBuchungen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonBuchungenLoeschen">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>190</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>buttonBuchungenLoeschen</string>
    </property>
   </widget>
  </widget>

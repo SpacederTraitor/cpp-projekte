@@ -1,15 +1,35 @@
 #ifndef PERSON_H
 #define PERSON_H
-#include <random>
 
-class Person
-{
+#include <string>
+#include <chrono>
+using namespace std;
+
+class Person {
 public:
-    Person();
-    int getPersonenanzahl();
+    Person(string v = "", string n = "");
+
+    int getKundenNr();
+    string getVorname();
+    string getNachname();
+    string fullname();
+    char getStatus();
+    void setStatus(char s);
+
+    void updateLastVisit();
+    long daysSinceLastVisit();
+
+    static int getPersonenanzahl();
 
 private:
-    int personenanzahl;
+    int kundenNr;
+    string vorname;
+    string nachname;
+    char status;
+    chrono::system_clock::time_point lastVisit;
+
+    static int nextNr;
+    static int personenanzahl;
 };
 
-#endif // PERSON_H
+#endif
