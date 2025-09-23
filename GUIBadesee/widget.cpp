@@ -17,7 +17,7 @@ Widget::~Widget()
     delete see;
 }
 
-// ------------------ Personen ------------------
+// Personen
 
 void Widget::on_buttonPersonAnlegen_clicked()
 {
@@ -39,18 +39,17 @@ void Widget::on_buttonAlleKunden_clicked()
     QString out = "Alle Kunden:\n";
     for (Person& p : see->getPersonen()) {
         out += "Nr: " + QString::number(p.getKundenNr()) +
-               " | " + QString::fromStdString(p.fullname()) +
-               " | Status: " + QChar(p.getStatus()) + "\n";
+               " | " + QString::fromStdString(p.fullname());
     }
     ui->plainTextEdit->appendPlainText(out);
 }
 
-// ------------------ Liegen ------------------
+// Liegen
 
 void Widget::on_buttonLiegeAnlegen_clicked()
 {
     bool ok;
-    int m = QInputDialog::getInt(this, "Liege anlegen", "Modell (0=Simple..4=Schirm+Service):", 0, 0, 4, 1, &ok);
+    int m = QInputDialog::getInt(this, "Liege anlegen", "Modell (0=Simple, 1=Liege Premium, 2=Liege mit Schirm, 3=Liege mit Service, =Schirm+Service):", 0, 0, 4, 1, &ok);
     if (!ok) return;
 
     Liege l = see->createLiege((BeachLoungerType)m);
@@ -59,17 +58,6 @@ void Widget::on_buttonLiegeAnlegen_clicked()
                                        " Typ: " + QString::fromStdString(Liege::typeToStr(l.getType())));
 }
 
-void Widget::on_buttonMehrereLiegen_clicked()
-{
-    bool ok;
-    int count = QInputDialog::getInt(this, "Mehrere Liegen", "Anzahl:", 1, 1, 100, 1, &ok);
-    if (!ok) return;
-    int m = QInputDialog::getInt(this, "Mehrere Liegen", "Modell (0..4):", 0, 0, 4, 1, &ok);
-    if (!ok) return;
-
-    see->createMultipleLiegen((BeachLoungerType)m, count);
-    ui->plainTextEdit->appendPlainText(QString::number(count) + " Liegen angelegt.");
-}
 
 void Widget::on_buttonAlleLiegen_clicked()
 {
@@ -82,7 +70,7 @@ void Widget::on_buttonAlleLiegen_clicked()
     ui->plainTextEdit->appendPlainText(out);
 }
 
-// ------------------ Buchungen ------------------
+// Buchungen
 
 void Widget::on_buttonLiegeBuchen_clicked()
 {
@@ -91,10 +79,7 @@ void Widget::on_buttonLiegeBuchen_clicked()
     if (!ok) return;
     int lid = QInputDialog::getInt(this, "Liege buchen", "Liege-ID:", 0, 0, 999999, 1, &ok);
     if (!ok) return;
-    QString d = QInputDialog::getText(this, "Liege buchen", "Datum (YYYY-MM-DD):", QLineEdit::Normal, "2025-09-22", &ok);
-    if (!ok) return;
-
-    if (see->bookLiege(kn, lid, d.toStdString())) {
+    if (see->bookLiege(kn, lid)) {
         ui->plainTextEdit->appendPlainText("Buchung erfolgreich.");
     } else {
         QMessageBox::warning(this, "Fehler", "Buchung fehlgeschlagen.");
@@ -106,26 +91,13 @@ void Widget::on_buttonAlleBuchungen_clicked()
     QString out = "Buchungen:\n";
     for (BuchungEntry& b : see->getBuchungen()) {
         out += "Kunde " + QString::number(b.kundenNr) +
-               " | Liege " + QString::number(b.liegeId) +
-               " | Datum " + QString::fromStdString(b.datum) + "\n";
+               " | Liege " + QString::number(b.liegeId);
     }
     ui->plainTextEdit->appendPlainText(out);
 }
 
-void Widget::on_buttonBuchungenLoeschen_clicked()
-{
-    bool ok;
-    QString pin = QInputDialog::getText(this, "Buchungen löschen", "PIN eingeben:", QLineEdit::Password, "", &ok);
-    if (!ok) return;
 
-    if (see->clearBuchungen(pin.toStdString())) {
-        ui->plainTextEdit->appendPlainText("Alle Buchungen gelöscht.");
-    } else {
-        QMessageBox::warning(this, "Fehler", "Falsche PIN!");
-    }
-}
-
-// ------------------ See Infos ------------------
+//  See Infos
 
 void Widget::on_wassertemperaturaktuellbutton_clicked()
 {

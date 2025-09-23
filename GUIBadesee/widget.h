@@ -22,12 +22,10 @@ private slots:
     void on_buttonAlleKunden_clicked();
 
     void on_buttonLiegeAnlegen_clicked();
-    void on_buttonMehrereLiegen_clicked();
     void on_buttonAlleLiegen_clicked();
 
     void on_buttonLiegeBuchen_clicked();
     void on_buttonAlleBuchungen_clicked();
-    void on_buttonBuchungenLoeschen_clicked();
 
     void on_wassertemperaturaktuellbutton_clicked();
     void on_wasserqualitaetbutton_clicked();

@@ -10,7 +10,7 @@ using namespace std;
 struct BuchungEntry {
     int kundenNr;
     int liegeId;
-    string datum;
+
 };
 
 class See {
@@ -23,13 +23,11 @@ public:
 
     // Liegen
     Liege createLiege(BeachLoungerType t);
-    vector<Liege> createMultipleLiegen(BeachLoungerType t, int count);
     vector<Liege>& getLiegen();
 
     // Buchungen
-    bool bookLiege(int kundenNr, int liegeId, string date);
+    bool bookLiege(int kundenNr, int liegeId);
     vector<BuchungEntry>& getBuchungen();
-    bool clearBuchungen(string pin);
 
     // See Infos
     int getWassertemperaturaktuell();

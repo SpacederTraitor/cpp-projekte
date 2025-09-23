@@ -32,10 +32,6 @@ public:
     conditionType getCondition();
     int getUsages();
 
-    void useOnce();
-    bool repair();
-    bool polish();
-
     static string condToStr(conditionType c);
     static string typeToStr(BeachLoungerType t);
 
@@ -46,7 +42,6 @@ private:
     int usages;
 
     static int nextId;
-    void degradeOne();
 };
 
 #endif

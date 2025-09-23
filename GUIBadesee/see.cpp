@@ -12,7 +12,7 @@ See::See() {
     pin = "1234"; // Standard-PIN
 }
 
-// ---------------- Personen ----------------
+//  Personen
 Person See::createPerson(string v, string n) {
     Person p(v, n);
     personen.push_back(p);
@@ -23,27 +23,20 @@ vector<Person>& See::getPersonen() {
     return personen;
 }
 
-// ---------------- Liegen ----------------
+//  Liegen
 Liege See::createLiege(BeachLoungerType t) {
     Liege l(t);
     liegen.push_back(l);
     return l;
 }
 
-vector<Liege> See::createMultipleLiegen(BeachLoungerType t, int count) {
-    vector<Liege> created;
-    for (int i = 0; i < count; i++) {
-        created.push_back(createLiege(t));
-    }
-    return created;
-}
 
 vector<Liege>& See::getLiegen() {
     return liegen;
 }
 
-// ---------------- Buchungen ----------------
-bool See::bookLiege(int kundenNr, int liegeId, string date) {
+//  Buchungen
+bool See::bookLiege(int kundenNr, int liegeId) {
     auto itP = find_if(personen.begin(), personen.end(),
                        [&](Person& p){ return p.getKundenNr() == kundenNr; });
     if (itP == personen.end()) return false;
@@ -55,7 +48,6 @@ bool See::bookLiege(int kundenNr, int liegeId, string date) {
     BuchungEntry be;
     be.kundenNr = kundenNr;
     be.liegeId = liegeId;
-    be.datum = date;
     buchungen.push_back(be);
 
     return true;
@@ -65,15 +57,9 @@ vector<BuchungEntry>& See::getBuchungen() {
     return buchungen;
 }
 
-bool See::clearBuchungen(string eingabePin) {
-    if (eingabePin == pin) {
-        buchungen.clear();
-        return true;
-    }
-    return false;
-}
 
-// ---------------- See Infos ----------------
+
+//  See Infos
 int See::getWassertemperaturaktuell() {
     return wassertemperaturaktuell;
 }
