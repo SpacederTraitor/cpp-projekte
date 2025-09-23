@@ -9,7 +9,6 @@ See::See() {
     srand(time(nullptr));
     wassertemperaturaktuell = 20 + rand() % 6;   // 20–25 °C
     wasserqualitaet = 1 + rand() % 5;           // Skala 1–5
-    pin = "1234"; // Standard-PIN
 }
 
 //  Personen

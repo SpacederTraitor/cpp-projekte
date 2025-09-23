@@ -61,6 +61,9 @@
      <height>171</height>
     </rect>
    </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="buttonPersonAnlegen">
    <property name="geometry">
@@ -132,7 +135,7 @@
     <rect>
      <x>490</x>
      <y>100</y>
-     <width>141</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>

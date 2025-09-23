@@ -1,6 +1,6 @@
 #include "person.h"
 
-int Person::nextNr = 1000;
+int Person::nextNr = 1;
 int Person::personenanzahl = 0;
 
 Person::Person(string v, string n) {

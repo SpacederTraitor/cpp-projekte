@@ -40,7 +40,6 @@ private:
 
     int wassertemperaturaktuell;
     int wasserqualitaet;
-    string pin;
 };
 
 #endif

@@ -49,7 +49,7 @@ void Widget::on_buttonAlleKunden_clicked()
 void Widget::on_buttonLiegeAnlegen_clicked()
 {
     bool ok;
-    int m = QInputDialog::getInt(this, "Liege anlegen", "Modell (0=Simple, 1=Liege Premium, 2=Liege mit Schirm, 3=Liege mit Service, =Schirm+Service):", 0, 0, 4, 1, &ok);
+    int m = QInputDialog::getInt(this, "Liege anlegen", "Liegen Art (0=Simple, 1=Liege Premium, 2=Liege mit Schirm, 3=Liege mit Service, =Schirm+Service):", 0, 0, 4, 1, &ok);
     if (!ok) return;
 
     Liege l = see->createLiege((BeachLoungerType)m);
