@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kiosk – Bestellnummern</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+
+    <!-- Eingabefeld -->
+    <item>
+     <widget class="QLineEdit" name="lineEditOrder">
+      <property name="placeholderText">
+       <string>Bestellnummer eingeben…</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Hinzufügen-Button -->
+    <item>
+     <widget class="QPushButton" name="pushButtonAdd">
+      <property name="text">
+       <string>Hinzufügen</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Ausgabefeld (Liste) -->
+    <item>
+     <widget class="QListWidget" name="listWidgetOrders"/>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+
+ </widget>
+
+ <resources/>
+ <connections/>
+</ui>

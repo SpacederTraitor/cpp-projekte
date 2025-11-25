@@ -5,7 +5,6 @@
 
 class LauncherStandardType {
 public:
-    // keine 'explicit'
     LauncherStandardType(unsigned long newInventoryNr);
     ~LauncherStandardType() = default;
 
@@ -13,10 +12,8 @@ public:
     void setLeaseDays(unsigned short days);
     unsigned short getLeaseDays() const;
 
-    // keine 'virtual'
     QString serialize() const;
 
-    // runtime tag (manual RTTI) to allow dispatch without virtual/dynamic_cast
     enum class LauncherType { Standard, Luxurious };
     bool isLuxurious() const { return type == LauncherType::Luxurious; }
 
@@ -28,4 +25,4 @@ protected:
     LauncherType type = LauncherType::Standard;
 };
 
-#endif // LAUNCHERATANDARDTYPE_H
+#endif

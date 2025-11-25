@@ -25,4 +25,4 @@ private:
     unsigned long inventarNrGlobal = 1;
 };
 
-#endif // CONTROLLERLAKE_H
+#endif

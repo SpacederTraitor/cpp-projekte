@@ -23,4 +23,4 @@ private:
     ControllerLake controller;
 };
 
-#endif // VIEWWIDGET1_H
+#endif

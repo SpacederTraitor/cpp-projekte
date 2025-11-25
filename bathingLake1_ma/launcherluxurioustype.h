@@ -6,7 +6,6 @@
 
 class LauncherLuxuriousType : public LauncherStandardType {
 public:
-    // keine 'explicit'
     LauncherLuxuriousType(unsigned long newInventoryNr);
 
     void setLeaseHours(unsigned short hours);
@@ -18,7 +17,6 @@ public:
     QString getFarbeGestell() const;
     QString getFarbeBezug() const;
 
-    // gleichnamige Methode, kein 'virtual'
     QString serialize() const;
 
 private:
@@ -28,4 +26,4 @@ private:
     QString farbeBezug;
 };
 
-#endif // LAUNCHERLUXURIOUSTYPE_H
+#endif
